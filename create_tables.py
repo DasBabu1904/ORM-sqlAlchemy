@@ -21,6 +21,15 @@ students = Table(
     Column("gender", String)
 )
 
+addresses = Table(
+    'addresses', meta, 
+    Column('id', Integer, primary_key = True), 
+    Column('st_id', Integer), 
+    Column('postal_add', String), 
+    Column('email_add', String)
+)
+    
+
 if __name__ == "__main__":
     meta.create_all(engine)
     print("Tables created successfully!")
